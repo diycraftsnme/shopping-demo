@@ -1,0 +1,105 @@
+<div ng-include="'src/common/header.html'" class="header-module"></div>
+
+<div class="top-banner">
+    <img class="home-banner" src="src/Images/home-banner.png" alt="Home Banner" height="500">
+</div>
+
+<!--<div class="row">-->
+    <!--<div class="small-12 columns">-->
+        <!--<div class="orbit" role="region" aria-label="Furniture promotions" data-orbit>-->
+            <!--<div class="orbit-wrapper">-->
+                <!--<div class="orbit-controls">-->
+                    <!--<button class="orbit-previous"><span class="show-for-sr">Previous promotion</span>&#9664;&#xFE0E;</button>-->
+                    <!--<button class="orbit-next"><span class="show-for-sr">Next promotion</span>&#9654;&#xFE0E;</button>-->
+                <!--</div>-->
+                <!--<ul class="orbit-container">-->
+                    <!--<li class="is-active orbit-slide">-->
+                        <!--<figure class="orbit-figure">-->
+                            <!--<img class="promo-image-1" src="src/Images/Promo1.jpg" alt="Promotion1" height="500">-->
+                            <!--<figcaption class="orbit-caption">Buy 1, Get 50% OFF</figcaption>-->
+                        <!--</figure>-->
+                    <!--</li>-->
+                    <!--<li class="orbit-slide">-->
+                        <!--<figure class="orbit-figure">-->
+                            <!--<img class="promo-image-2" src="src/Images/Promo2.jpg" alt="Promotion2" height="500">-->
+                            <!--<figcaption class="orbit-caption">50% Off on all product</figcaption>-->
+                        <!--</figure>-->
+                    <!--</li>-->
+                    <!--<li class="orbit-slide">-->
+                        <!--<figure class="orbit-figure">-->
+                            <!--<img class="promo-image-3" src="src/Images/Promo3.jpg" alt="Promotion3" height="500">-->
+                            <!--<figcaption class="orbit-caption">Buy 1, Get 50% OFF</figcaption>-->
+                        <!--</figure>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<nav class="orbit-bullets">-->
+                <!--<button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>-->
+                <!--<button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>-->
+                <!--<button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>-->
+            <!--</nav>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<div class="row category-section">
+    <div class="small-12 columns">
+        <h3>SHOP</h3>
+    </div>
+    <div class="medium-4 columns sofa-category">
+        <a href="#"  class="sofa-category" ng-click="showCategory('sofas');">
+        </a>
+        <div class="cate-text">
+            <div>SOFAS</div>
+            <div class="sub-text"><a href="#" ng-click="showCategory('sofas');">SHOP NOW</a></div>
+        </div>
+    </div>
+    <div class="medium-4 columns chair-category">
+        <a href="#" class="chair-category" ng-click="showCategory('chairs');">
+        </a>
+        <div class="cate-text">
+            <div>CHAIRS</div>
+            <div class="sub-text"><a href="#" ng-click="showCategory('sofas');">SHOP NOW</a></div>
+        </div>
+    </div>
+    <div class="medium-4 columns table-category">
+        <a href="#" class="table-category" ng-click="showCategory('tables');">
+        </a>
+        <div class="cate-text">
+            <div>TABLES</div>
+            <div class="sub-text"><a href="#" ng-click="showCategory('sofas');">SHOP NOW</a></div>
+        </div>
+    </div>
+</div>
+<div class="onSale-section">
+    <div>ON SALE NOW</div>
+    <button class="button primary">
+        <span>VIEW OFFERS</span>
+    </button>
+</div>
+
+<div ng-include="'src/common/products.html'" class="product-listing-module"></div>
+
+
+<!--<div class="mini-cart show-for-medium-up">-->
+    <!--<div class="mini-cart-details">-->
+        <!--<div class="row" ng-repeat="product in cartDetails">-->
+            <!--<div class="medium-3 columns">-->
+                <!--<img src="{{product.image}}" alt="{{product.name}}"/>-->
+            <!--</div>-->
+            <!--<div class="medium-9 columns">-->
+                <!--<div class="product-name">{{product.name}}</div>-->
+                <!--<div class="product-price">-->
+                    <!--<div class="offer-price" ng-if="product.originalprice != product.offerprice"><span><i class='fa fa-inr'></i>{{product.originalprice}}</span> <i class='fa fa-inr'></i>{{product.offerprice}}</div>-->
+                    <!--<div class="original-price" ng-if="product.originalprice == product.offerprice"><i class='fa fa-inr'></i>{{product.originalprice}}</div>-->
+                <!--</div>-->
+                <!--<div class="remove-section">-->
+                    <!--<a href="#" ng-click="removeProduct(product.id)"><i class="fa fa-times"></i> Remove</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="checkout-button text-center">-->
+        <!--<button class="button primary"><span>CHECKOUT</span></button>-->
+    <!--</div>-->
+<!--</div>-->

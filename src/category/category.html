@@ -1,0 +1,147 @@
+<div ng-include="'src/common/header.html'" class="header-module"></div>
+
+<div class="top-banner category-banner">
+    <img class="home-banner" src="{{currentCategoryImage}}" alt="{{currentCategoryName}} Banner" height="500">
+</div>
+
+<div class="category-header">
+    <h2>{{currentCategoryName}}</h2>
+</div>
+
+<div class="row category-section">
+    <div class="small-12 columns">
+        <nav aria-label="You are here:" class="float-left" role="navigation">
+            <ul class="breadcrumbs">
+                <li><a ui-sref="/">Home</a></li>
+                <li>
+                    <span class="show-for-sr">Current: </span> {{currentCategoryName}}
+                </li>
+            </ul>
+        </nav>
+        <div class="sort-by-section float-right">
+                <select>
+                    <option value="0">Sort By Featured</option>
+                    <option value="1">Sort By Price: Low to High</option>
+                    <option value="2">Sort By Price: High to Low</option>
+                    <option value="3">Sort By Average Customer Ratings</option>
+                </select>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="medium-3 columns">
+        <ul class="accordion" data-accordion data-multi-expand="true">
+            <li class="accordion-item is-active" data-accordion-item>
+                <a href="#" class="accordion-title">Category</a>
+
+                <div class="accordion-content" data-tab-content>
+                    <input id="categoryName" class="select-filter" name="categoryName" value="0" type="radio">
+                    <label for="categoryName">{{currentCategoryName}}</label>
+                </div>
+            </li>
+            <li class="accordion-item is-active" data-accordion-item>
+                <a href="#" class="accordion-title">Brand</a>
+
+                <div class="accordion-content" data-tab-content>
+                    <div>
+                        <input id="brandsName_0" class="brand-checkbox" name="brandsName_0" value="0" type="checkbox">
+                        <label for="brandsName_0">ABC</label>
+                    </div>
+                    <div>
+                        <input id="brandsName_1" class="brand-checkbox" name="brandsName_1" value="1" type="checkbox">
+                        <label for="brandsName_1">DEF</label>
+                    </div>
+                    <div>
+                        <input id="brandsName_2" class="brand-checkbox" name="brandsName_2" value="2" type="checkbox">
+                        <label for="brandsName_2">GHI</label>
+                    </div>
+                    <div>
+                        <input id="brandsName_3" class="brand-checkbox" name="brandsName_3" value="3" type="checkbox">
+                        <label for="brandsName_3">JKL</label>
+                    </div>
+                    <div>
+                        <input id="brandsName_4" class="brand-checkbox" name="brandsName_4" value="4" type="checkbox">
+                        <label for="brandsName_4">MNO</label>
+                    </div>
+                    <div>
+                        <input id="brandsName_5" class="brand-checkbox" name="brandsName_5" value="5" type="checkbox">
+                        <label for="brandsName_5">PQR</label>
+                    </div>
+                    <div>
+                        <input id="brandsName_6" class="brand-checkbox" name="brandsName_6" value="6" type="checkbox">
+                        <label for="brandsName_6">STU</label>
+                    </div>
+                    <div>
+                        <input id="brandsName_7" class="brand-checkbox" name="brandsName_7" value="7" type="checkbox">
+                        <label for="brandsName_7">VWX</label>
+                    </div>
+                    <div>
+                        <input id="brandsName_8" class="brand-checkbox" name="brandsName_8" value="8" type="checkbox">
+                        <label for="brandsName_8">YZA</label>
+                    </div>
+                </div>
+            </li>
+            <li class="accordion-item is-active" data-accordion-item>
+                <a href="#" class="accordion-title">On Discount</a>
+
+                <div class="accordion-content" data-tab-content>
+                    <div>
+                        <input id="discountName_0" class="discount-radio" name="discountName" value="0" type="radio">
+                        <label for="discountName_0">20% Off or More</label>
+                    </div>
+                    <div>
+                        <input id="discountName_1" class="discount-radio" name="discountName" value="1" type="radio">
+                        <label for="discountName_1">40% Off or More</label>
+                    </div>
+                    <div>
+                        <input id="discountName_2" class="discount-radio" name="discountName" value="0" type="radio">
+                        <label for="discountName_2">60% Off or More</label>
+                    </div>
+                    <div>
+                        <input id="discountName_3" class="discount-radio" name="discountName" value="0" type="radio">
+                        <label for="discountName_3">75% Off or More</label>
+                    </div>
+                </div>
+            </li>
+
+            <li class="accordion-item is-active" data-accordion-item>
+                <a href="#" class="accordion-title">On Discount</a>
+
+                <div class="accordion-content" data-tab-content>
+                    <div>
+                        <rzslider
+                                rz-slider-model="slider.minValue"
+                                rz-slider-high="slider.maxValue"
+                                rz-slider-options="slider.options"></rzslider>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="medium-9 columns">
+        <div ng-include="'src/common/products.html'" class="product-listing-module"></div>
+    </div>
+</div>
+<!--<div class="mini-cart show-for-medium-up">-->
+    <!--<div class="mini-cart-details">-->
+        <!--<div class="row" ng-repeat="product in cartDetails">-->
+            <!--<div class="medium-3 columns">-->
+                <!--<img src="{{product.image}}" alt="{{product.name}}"/>-->
+            <!--</div>-->
+            <!--<div class="medium-9 columns">-->
+                <!--<div class="product-name">{{product.name}}</div>-->
+                <!--<div class="product-price">-->
+                    <!--<div class="offer-price" ng-if="product.originalprice != product.offerprice"><span><i class='fa fa-inr'></i>{{product.originalprice}}</span> <i class='fa fa-inr'></i>{{product.offerprice}}</div>-->
+                    <!--<div class="original-price" ng-if="product.originalprice == product.offerprice"><i class='fa fa-inr'></i>{{product.originalprice}}</div>-->
+                <!--</div>-->
+                <!--<div class="remove-section">-->
+                    <!--<a href="#" ng-click="removeProduct(product.id)"><i class="fa fa-times"></i> Remove</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="checkout-button text-center">-->
+        <!--<button class="button primary"><span>CHECKOUT</span></button>-->
+    <!--</div>-->
+<!--</div>-->

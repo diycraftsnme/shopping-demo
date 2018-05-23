@@ -1,0 +1,39 @@
+<div class="header-area">
+    <div class="left-side-content">
+        <div class="logo">
+            <h1><a ui-sref="/">home decor</a></h1>
+        </div>
+        <div class="nav-section show-for-large">
+            <a ui-sref="category({cid:'sofas'})">SOFAS</a>
+            <a ui-sref="category({cid:'chairs'})">CHAIRS</a>
+            <a ui-sref="category({cid:'tables'})">TABLES</a>
+        </div>
+    </div>
+    <div class="right-side-content">
+        <div class="float-right">
+            <div class="search-input">
+                <div class="input-area">
+                    <input type="text" name="searchTerm" placeholder="SEARCH"/>
+                </div>
+            </div>
+            <a href="#" ng-click="toggleSearchSection()"><i class="fa fa-search" ng-hide="showSearchOverlay"></i><i class="fa fa-times-circle" ng-show="showSearchOverlay"></i></a>
+            <div class="search-section">
+                <div class="search-overlay">
+                    <div class="category-rec">
+                        <h2>Top categories</h2>
+                        <div>
+                            <a ui-sref="category({cid:'sofas'})">SOFAS</a>
+                            <a ui-sref="category({cid:'chairs'})">CHAIRS</a>
+                            <a ui-sref="category({cid:'tables'})">TABLES</a>
+                        </div>
+                    </div>
+                    <div class="product-results">
+                        <h2>Products</h2>
+                        <p>Sorry! we did not find any products for your query</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" ng-click=""><i class="fa fa-shopping-cart"></i></a>
+        </div>
+    </div>
+</div>

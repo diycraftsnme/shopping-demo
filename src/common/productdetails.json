@@ -1,0 +1,13 @@
+{
+  "Sofa":[
+    {"image":"src/Images/sofa1.jpg","description":"Elegant and compact design. Easy-to-clean faux leather covering.","originalprice":"INR2500.00","offerprice":"INR2000.00","promotion":"Get INR500 OFF"},
+    {"image":"src/Images/sofa2.jpg","description":"Elegant and compact design. Easy-to-clean faux leather covering.","originalprice":"INR3500.00","offerprice":"INR3500.00","promotion":""},
+    {"image":"src/Images/sofa3.jpg","description":"Elegant and compact design. Easy-to-clean faux leather covering.","originalprice":"INR5500.00","offerprice":"INR4500.00","promotion":"Get INR1000 OFF"}
+  ],
+  "Chair":[{"image":"src/Images/chair1.jpg","description":"Elegant and compact design. Easy-to-clean faux leather covering.","originalprice":"INR700.00","offerprice":"INR600.00","promotion":"Get INR100 OFF"},
+    {"image":"src/Images/chair2.jpg","description":"Elegant and compact design. Easy-to-clean faux leather covering.","originalprice":"INR1500.00","offerprice":"INR1500.00","promotion":""},
+    {"image":"src/Images/chair3.jpg","description":"Elegant and compact design. Easy-to-clean faux leather covering.","originalprice":"INR550.00","offerprice":"INR450.00","promotion":"Get INR100 OFF"}
+  ],
+  "Table":[{"image":"src/Images/table1.jpg","description":"Elegant and compact design. Easy-to-clean faux leather covering.","originalprice":"INR1050.00","offerprice":"INR950.00","promotion":"Get INR100 OFF"}
+  ]
+}
