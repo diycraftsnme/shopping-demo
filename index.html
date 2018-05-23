@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shoppingDemoProject">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="fragment" content="!">
+
+    <title>Demo Project</title>
+
+    <link href="node_modules/foundation-sites/dist/css/foundation.min.css" rel="stylesheet" media="all"/>
+    <link href="node_modules/foundation-sites/dist/css/foundation-float.min.css" rel="stylesheet" media="all"/>
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" media="all"/>
+    <link href="node_modules/motion-ui/dist/motion-ui.min.css" rel="stylesheet" media="all"/>
+    <link href="node_modules/wip-image-zoom/dist/wip-image-zoom.min.css" rel="stylesheet" media="all"/>
+    <link href="node_modules/angularjs-slider/dist/rzslider.min.css" rel="stylesheet" media="all"/>
+    <link href="src/app.css" rel="stylesheet" media="all"/>
+</head>
+<body>
+    <div class="off-canvas-wrapper">
+        <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
+            <a href="javascript:void(0)">Home</a>
+            <a href="javascript:void(0)">Chair</a>
+            <a href="javascript:void(0)">Sofas</a>
+            <a href="javascript:void(0)">Tables</a>
+
+            <button type="button" class="button close-canvas" data-toggle="offCanvas"><i class="fa fa-times"></i></button>
+        </div>
+        <button type="button" class="button open-canvas hide-for-large" data-toggle="offCanvas"><i class="fa fa-bars"></i></button>
+        <div class="off-canvas-content" data-off-canvas-content>
+            <div ui-view class="main-content"></div>
+            <div ng-include="'src/common/footer.html'" class="footer-section"></div>
+            <div class="back-to-top">
+                <a href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'slow');"><i class="fa fa-chevron-up"></i></a>
+            </div>
+        </div>
+
+    </div>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="node_modules/angular-animate/angular-animate.min.js"></script>
+<script src="node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="node_modules/ionicons/dist/ionicons.js"></script>
+    <script src="node_modules/wip-image-zoom/dist/wip-image-zoom.min.js"></script>
+    <script src="node_modules/angularjs-slider/dist/rzslider.min.js"></script>
+<script src="src/app.min.js"></script>
+<script>
+$(document).foundation();
+</script>
+
+</body>
+</html>
