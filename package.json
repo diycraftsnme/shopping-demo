@@ -31,6 +31,6 @@
   },
   "scripts": {
     "prestart": "npm install",
-    "start": "gulp start",
+    "start": "gulp start"
     }
 }
