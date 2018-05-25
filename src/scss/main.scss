@@ -296,6 +296,21 @@
 
 body{
   font-family: Roboto, sans-serif;
+  &.sofacategory{
+    .chair-section,.table-section{
+      display: none;
+    }
+  }
+  &.chaircategory{
+    .sofa-section,.table-section{
+      display: none;
+    }
+  }
+  &.tablecategory{
+    .chair-section,.sofa-section{
+      display: none;
+    }
+  }
   &.sticky-header{
     .header-module{
       background: #f06275;
@@ -799,6 +814,22 @@ select{
     }
     .fa-youtube-square{
       color: red;
+    }
+  }
+}
+
+.qv-modal{
+  .product-name,.original-price,.product-promotion{
+    margin-bottom: 15px;
+    a{
+      color: #333;
+      font-size: 18px;
+    }
+  }
+  .product-name{
+    div{
+      color: #666;
+      font-size: 11px;
     }
   }
 }

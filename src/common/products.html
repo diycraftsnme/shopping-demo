@@ -1,5 +1,5 @@
 <div class="row small-up-2 medium-up-{{mediumGridCount}} large-up-{{largeGridCount}} product-listing">
-    <div class="column column-block product-section" ng-repeat="product in productArray.Sofa">
+    <div class="column column-block product-section sofa-section" ng-repeat="product in productArray.Sofa">
         <a class="image" ui-sref="product({pid:product.id,cid:'Sofas'})" style="background-image: url({{product.image}}); height: 400px;">
 
         </a>
@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div class="reveal small" id="quickView_Modal_{{product.id}}" data-reveal>
+        <div class="reveal small qv-modal" id="quickView_Modal_{{product.id}}" data-reveal>
             <div class="rw">
                 <div class="small-6 columns">
                     <div class="product-image">
@@ -33,19 +33,20 @@
                 <div class="small-6 columns">
                     <div class="product-name">
                         <a ui-sref="product({pid:product.id,cid:'Sofas'})">{{product.name}}</a>
-                    </div>
-                    <div class="product-desc">
-                        {{product.description}}
+                        <div class="offer-price" ng-if="product.originalprice != product.offerprice">Was <span><i class='fa fa-inr'></i>{{product.originalprice}}</span></div>
                     </div>
                     <div class="product-price">
-                        <div class="offer-price" ng-if="product.originalprice != product.offerprice"><span><i class='fa fa-inr'></i>{{product.originalprice}}</span> <i class='fa fa-inr'></i>{{product.offerprice}}</div>
-                        <div class="original-price" ng-if="product.originalprice == product.offerprice"><i class='fa fa-inr'></i>{{product.originalprice}}</div>
+                        <div class="original-price"><i class='fa fa-inr'></i>{{product.originalprice}}</div>
                     </div>
                     <div class="product-promotion">
                         {{product.promotion}}
                     </div>
                     <div class="add-to-cart">
                         <button class="primary button" ng-click="addToCart(product.id)">ADD TO CART</button>
+                        <button class="hollow button"><i class="fa fa-apple"></i> Buy with Apple Pay</button>
+                    </div>
+                    <div class="product-desc">
+                        {{product.description}}
                     </div>
                 </div>
             </div>
@@ -55,7 +56,7 @@
             </button>
         </div>
     </div>
-    <div class="column column-block product-section" ng-repeat="product in productArray.Chair">
+    <div class="column column-block product-section chair-section" ng-repeat="product in productArray.Chair">
         <a class="image" ui-sref="product({pid:product.id,cid:'Chairs'})" style="background-image: url({{product.image}}); height: 400px;">
 
         </a>
@@ -78,7 +79,7 @@
             </div>
         </div>
 
-        <div class="reveal small" id="quickView_Modal_{{product.id}}" data-reveal>
+        <div class="reveal small qv-modal" id="quickView_Modal_{{product.id}}" data-reveal>
             <div class="rw">
                 <div class="small-6 columns">
                     <div class="product-image">
@@ -88,22 +89,20 @@
                 <div class="small-6 columns">
                     <div class="product-name">
                         <a ui-sref="product({pid:product.id,cid:'Chairs'})">{{product.name}}</a>
-                        <div class="product-desc">
-                            {{product.description}}
-                        </div>
-                    </div>
-                    <div class="product-desc">
-                        {{product.description}}
+                        <div class="offer-price" ng-if="product.originalprice != product.offerprice">Was <span><i class='fa fa-inr'></i>{{product.originalprice}}</span></div>
                     </div>
                     <div class="product-price">
-                        <div class="offer-price" ng-if="product.originalprice != product.offerprice"><span><i class='fa fa-inr'></i>{{product.originalprice}}</span> <i class='fa fa-inr'></i>{{product.offerprice}}</div>
-                        <div class="original-price" ng-if="product.originalprice == product.offerprice"><i class='fa fa-inr'></i>{{product.originalprice}}</div>
+                        <div class="original-price"><i class='fa fa-inr'></i>{{product.originalprice}}</div>
                     </div>
                     <div class="product-promotion">
                         {{product.promotion}}
                     </div>
                     <div class="add-to-cart">
                         <button class="primary button" ng-click="addToCart(product.id)">ADD TO CART</button>
+                        <button class="hollow button"><i class="fa fa-apple"></i> Buy with Apple Pay</button>
+                    </div>
+                    <div class="product-desc">
+                        {{product.description}}
                     </div>
                 </div>
             </div>
@@ -113,7 +112,7 @@
             </button>
         </div>
     </div>
-    <div class="column column-block product-section" ng-repeat="product in productArray.Table">
+    <div class="column column-block product-section table-section" ng-repeat="product in productArray.Table">
         <a class="image" ui-sref="product({pid:product.id,cid:'Tables'})" style="background-image: url({{product.image}}); height: 400px;">
 
         </a>
@@ -136,7 +135,7 @@
             </div>
         </div>
 
-        <div class="reveal small" id="quickView_Modal_{{product.id}}" data-reveal>
+        <div class="reveal small qv-modal" id="quickView_Modal_{{product.id}}" data-reveal>
             <div class="rw">
                 <div class="small-6 columns">
                     <div class="product-image">
@@ -146,22 +145,20 @@
                 <div class="small-6 columns">
                     <div class="product-name">
                         <a ui-sref="product({pid:product.id,cid:'Tables'})">{{product.name}}</a>
-                    </div>
-                    <div class="product-desc">
-                        {{product.description}}
+                        <div class="offer-price" ng-if="product.originalprice != product.offerprice">Was <span><i class='fa fa-inr'></i>{{product.originalprice}}</span></div>
                     </div>
                     <div class="product-price">
-                        <div class="offer-price" ng-if="product.originalprice != product.offerprice"><span><i class='fa fa-inr'></i>{{product.originalprice}}</span> <i class='fa fa-inr'></i>{{product.offerprice}}</div>
-                        <div class="original-price" ng-if="product.originalprice == product.offerprice"><i class='fa fa-inr'></i>{{product.originalprice}}</div>
+                        <div class="original-price"><i class='fa fa-inr'></i>{{product.originalprice}}</div>
                     </div>
                     <div class="product-promotion">
                         {{product.promotion}}
                     </div>
-                    <div class="product-desc">
-                        {{product.description}}
-                    </div>
                     <div class="add-to-cart">
                         <button class="primary button" ng-click="addToCart(product.id)">ADD TO CART</button>
+                        <button class="hollow button"><i class="fa fa-apple"></i> Buy with Apple Pay</button>
+                    </div>
+                    <div class="product-desc">
+                        {{product.description}}
                     </div>
                 </div>
             </div>
