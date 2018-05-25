@@ -22,7 +22,10 @@
     "motion-ui": "^1.2.3",
     "slick-carousel": "^1.8.1",
     "uglify": "^0.1.5",
-    "wip-image-zoom": "^1.4.1"
+    "wip-image-zoom": "^1.4.1",
+    
+         "mdi": "^1.7.22",
+         "express": "^4.15.0"
   },
   "dependencies": {
     "angular-ui-router": "^1.0.3",
@@ -31,6 +34,6 @@
   },
   "scripts": {
     "prestart": "npm install",
-    "start": "gulp start"
+    "start": "node ./index.js"
     }
 }
