@@ -332,7 +332,7 @@ body{
     width: 100%;
     top:0;
     left:0;
-    background: transparent;
+    background: #00000026;
     color: #fff;
     z-index: 99;
     &.sticky{
@@ -366,6 +366,9 @@ body{
         font-size: 53px;
         font-family: Arial;
         line-height: 20%;
+        &:hover,&:focus{
+          text-decoration: none !important;
+        }
         @media screen and (max-width: 63.9375em) {
           font-size: 30px;
         }
@@ -583,6 +586,7 @@ input::placeholder { /* Chrome/Opera/Safari */
     font-size: 106px;
     color: #fff;
     font-weight: 500;
+    text-shadow: 5px 5px 20px black;
     @media screen and (max-width: 63.9375em) {
       font-size: 70px;
     }
@@ -634,18 +638,18 @@ input::placeholder { /* Chrome/Opera/Safari */
   }
   .product-name{
     float: left;
-    width:70%;
+    width:65%;
     @media screen and (max-width: 63.9375em) {
       width: 60%;
     }
     color: #333;
-    min-height: 80px;
+    min-height: 60px;
     justify-content: center;
-    padding: 15px 0 8px;
+    padding: 10px 0 8px;
     .original-price{
       display: none;
       color: #666;
-      font-size: 11px;
+      font-size: 10px;
     }
     a{
       white-space: nowrap;
@@ -663,14 +667,14 @@ input::placeholder { /* Chrome/Opera/Safari */
   }
   .product-price-buy{
     float: left;
-    width: 30%;
+    width: 35%;
     @media screen and (max-width: 63.9375em) {
       width: 40%;
     }
     background: #39aae0;
     text-align: center;
     color: #fff;
-    min-height: 78px;
+    min-height: 65px;
     padding: 15px 0;
     .offer-price{
       div{
@@ -940,4 +944,8 @@ select{
       color: #333;
     }
   }
+}
+
+.accordion-title{
+  font-size: 1em;
 }

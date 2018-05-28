@@ -8,9 +8,15 @@ $(document).ready(function () {
 
     $(document).on("mouseenter",".image",function() {
         $(this).siblings('.prod-details').find('.product-description,.product-name .original-price').toggle('slow');
+        $(this).siblings('.prod-details').find('.product-name').animate({
+            'padding-top' : 0
+        }, "slow");
     });
     $(document).on("mouseleave",".image",function() {
         $(this).siblings('.prod-details').find('.product-description,.product-name .original-price').toggle();
+        $(this).siblings('.prod-details').find('.product-name').animate({
+            'padding-top' : 10
+        }, "slow");
     });
 });
 
