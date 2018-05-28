@@ -1,5 +1,6 @@
 <div class="header-area">
     <div class="left-side-content">
+        <button type="button" class="button open-canvas hide-for-large" data-toggle="offCanvas"><i class="fa fa-bars"></i></button>
         <div class="logo">
             <h1><a ui-sref="/">home decor</a></h1>
         </div>
@@ -16,8 +17,8 @@
                     <input type="text" name="searchTerm" placeholder="SEARCH"/>
                 </div>
             </div>
-            <a href="#" ng-click="toggleSearchSection()"><i class="fa fa-search" ng-hide="showSearchOverlay"></i><i class="fa fa-times-circle" ng-show="showSearchOverlay"></i></a>
-            <div class="search-section">
+            <a href="#" class="show-for-large" ng-click="toggleSearchSection()"><i class="fa fa-search" ng-hide="showSearchOverlay"></i><i class="fa fa-times-circle" ng-show="showSearchOverlay"></i></a>
+            <div class="search-section show-for-large">
                 <div class="search-overlay">
                     <div class="category-rec">
                         <h2>Top categories</h2>
@@ -33,7 +34,14 @@
                     </div>
                 </div>
             </div>
+            <a href="#" class="hide-for-large" ng-click="toggleMobileSearchSection()"><i class="fa fa-search" ng-hide="showSearchOverlay"></i><i class="fa fa-times-circle" ng-show="showSearchOverlay"></i></a>
             <a href="#" ng-click=""><i class="fa fa-shopping-cart"></i></a>
+            <div class="reveal" id="searchOverlay" data-reveal>
+                <input type="text" name="searchTerm" placeholder="SEARCH"/>
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
         </div>
     </div>
 </div>

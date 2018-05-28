@@ -2,6 +2,7 @@ function toggleMiniCart() {
     if($('.mini-cart .row').length>0)
         $('.mini-cart').toggleClass('show');
 }
+var searchOverlayMobile;
 
 $(document).ready(function () {
 
@@ -28,6 +29,7 @@ $(document).ready(function () {
         $scope.currentProductName = '';
         $scope.productDetails = {};
         $scope.showSearchOverlay = false;
+        $scope.activeClass = '';
         $scope.slider = {
             minValue: 100,
             maxValue: 4000,
@@ -60,6 +62,12 @@ $(document).ready(function () {
             angular.element('.input-area input').focus();
             angular.element('.header-module').toggleClass('sticky');
             angular.element('.search-section').toggle('slow');
+        };
+
+        $scope.toggleMobileSearchSection = function () {
+            if(typeof searchOverlayMobile == 'undefined')
+                searchOverlayMobile = new Foundation.Reveal(angular.element('#searchOverlay'));
+            angular.element('#searchOverlay').foundation('toggle');
         };
 
         $(window).scroll(function() {
@@ -243,7 +251,6 @@ $(document).ready(function () {
                 $scope.currentCategoryName = 'tables';
             }
         }
-
 
     }]);
 })();

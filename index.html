@@ -14,19 +14,19 @@
     <link href="node_modules/motion-ui/dist/motion-ui.min.css" rel="stylesheet" media="all"/>
     <link href="node_modules/wip-image-zoom/dist/wip-image-zoom.min.css" rel="stylesheet" media="all"/>
     <link href="node_modules/angularjs-slider/dist/rzslider.min.css" rel="stylesheet" media="all"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
     <link href="src/app.css" rel="stylesheet" media="all"/>
 </head>
 <body>
     <div class="off-canvas-wrapper">
         <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
-            <a href="javascript:void(0)">Home</a>
-            <a href="javascript:void(0)">Chair</a>
-            <a href="javascript:void(0)">Sofas</a>
-            <a href="javascript:void(0)">Tables</a>
+            <div><a ui-sref="category({cid:'sofas'})"><i class="material-icons">weekend</i> SOFAS</a></div>
+            <div><a ui-sref="category({cid:'chairs'})"><i class="material-icons">event_seat</i> CHAIRS</a></div>
+            <div><a ui-sref="category({cid:'tables'})"><i class="material-icons">business</i> TABLES</a></div>
 
             <button type="button" class="button close-canvas" data-toggle="offCanvas"><i class="fa fa-times"></i></button>
         </div>
-        <button type="button" class="button open-canvas hide-for-large" data-toggle="offCanvas"><i class="fa fa-bars"></i></button>
         <div class="off-canvas-content" data-off-canvas-content>
             <div ui-view class="main-content"></div>
             <div ng-include="'src/common/footer.html'" class="footer-section"></div>
